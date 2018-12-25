@@ -19,9 +19,9 @@ def awscp():
     os.system(cmd)
 
 def awsvim():
-    cmd_list = sys.argv[1].split("/")
-    cmd = "vim http://%s.s3.amazonaws.com" % cmd_list[0]
-    for i in range(1, len(cmd_list)):
-        cmd = cmd + "/" + cmd_list[i]
+    #cmd_list = sys.argv[1].split("/")
+    cmd = "vim https://s3-ap-northeast-1.amazonaws.com/%s" % sys.argv[1]
+    # for i in range(1, len(cmd_list)):
+    #     cmd = cmd + "/" + cmd_list[i]
     print cmd
     os.system(cmd)
